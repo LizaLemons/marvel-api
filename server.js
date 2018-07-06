@@ -19,8 +19,11 @@ app.use(bodyParser.urlencoded({extended: true}));
 // const dbName = 'marvel_db';
 
 /* heroku mongo URL: */
-const mongoUrl = 'mongodb://heroku_z61ltqdr:barui01gapagu1spgue4ppcfu1@ds023465.mlab.com:23465/heroku_z61ltqdr';
-const dbName = 'heroku_z61ltqdr';
+// const mongoUrl = 'mongodb://heroku_z61ltqdr:barui01gapagu1spgue4ppcfu1@ds023465.mlab.com:23465/heroku_z61ltqdr';
+// const dbName = 'heroku_z61ltqdr';
+
+const mongoUrl = "mongodb://heroku_lcvv0b2f:5oavh02srp7lsk4bbg28gopj3t@ds229701.mlab.com:29701/heroku_lcvv0b2f";
+const dbName = "heroku_lcvv0b2f";
 
 
 /***************** our backend routes *****************/
@@ -189,9 +192,8 @@ app.delete('/favorites/:marvel_id', function(request, response) {
 
 /***************** port stuff *****************/
 
-PORT = 3000; /* local: */
-/* why prod port err? */
-// PORT = process.env.PORT || 80; /* production: */
+// PORT = 3000; /* local: */
+PORT = process.env.PORT || 80; /* production: */
 
 /* tell our app where to listen */
 app.listen(PORT, function(){
